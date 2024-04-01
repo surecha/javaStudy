@@ -1,0 +1,74 @@
+<전화번호부 6단계 >
+*이름 또는 전화번호의 중복값을 저장하지 않는다.
+*단 HashSet 을 이용한다.
+*hashCode, equals 메소드를 오버라이딩한다.
+ 
+
+//실행 예
+
+메뉴를 선택하세요.
+----------------
+1.데이터 입력
+2.데이터 검색
+3.데이터 삭제
+4.프로그램 종료
+----------------
+선택:1
+데이터 입력을 시작합니다..
+1.일반, 2.대학, 3.회사
+선택>>1
+이름: 홍길동1
+전화번호: 111-2222
+데이터 입력이 완료되었습니다.
+
+메뉴를 선택하세요.
+----------------
+1.데이터 입력
+2.데이터 검색
+3.데이터 삭제
+4.프로그램 종료
+----------------
+선택:1
+데이터 입력을 시작합니다..
+1.일반, 2.대학, 3.회사
+선택>>1
+이름: 홍길동2
+전화번호: 111-2222
+이미 저장된 데이터입니다.
+
+class PhoneBookManager
+{
+	//private final int MAX=100;
+	//private PhoneInfo[] list=new PhoneInfo[MAX];
+	//private int cnt=0;
+        HashSet<PhoneInfo> list=new HashSet<PhoneInfo>();
+
+	private PhoneBookManager()
+	{ 
+	   생성자.....그대로..	
+	}
+	static PhoneBookManager inst=null;
+	public static PhoneBookManager creatManagerInst()
+	{	
+	   	if(inst==null)
+			inst=new PhoneBookManager();
+	
+		return inst;
+	}
+
+       추가 add
+
+	삭제 remove
+
+	검색  반복문대신...아이터레이터...
+}
+
+
+
+void main(){
+	//PhoneBookManager handler=new PhoneBookManager();
+	//PhoneBookManager handler2=new PhoneBookManager();
+ 	PhoneBookManager p=PhoneBookManager.creatManagerInst();
+	
+	//p=PhoneBookManager.creatManagerInst();
+	//System.out.println(p);

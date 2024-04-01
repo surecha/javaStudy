@@ -1,0 +1,102 @@
+<전화번호부 3단계>
+class PhoneInfo   //데이터 클래스
+{
+	private name;
+	private phoneNumber;
+	private birth;
+	//생성자
+	public void showPhoneInfo(){
+		System.out.println("name: "+name);
+		System.out.println("phone: "+phoneNumber);
+		if(birth!=null)
+			System.out.println("birth: "+birth);
+	}
+} //PhoneInfo end
+			
+
+class PhoneBook
+{
+	static void main()
+	{
+		PhoneBookManager manager=new PhoneBookManager();
+
+		while(true)
+		{
+			Menu.showMenu();
+	
+		}
+
+	}
+	
+} //class end
+
+class Menu
+{
+	static void showMenu()
+	{
+           1.    2.... 3..
+	} 
+}
+
+class PhoneBookManager    //제어 클래스
+{
+	final int MAX=100;
+	PhoneInfo[] phoneList=new PhoneInfo[MAX];
+	int cnt=0;
+
+	void inputData()
+	{ 
+   		cnt++;
+	}
+	void searchData()
+	{
+
+	}
+	void deleteData()
+	{
+   		cnt--;
+	}
+}//end class
+
+// 실행 예
+
+메뉴를 선택하세요.
+----------------
+1.데이터 입력
+2.데이터 검색
+3.데이터 삭제
+4.프로그램 종료
+----------------
+선택: 1
+이름: 홍길동   //동명이인은 배제....
+전화번호: 111-2222
+생년월일: 99년 4월 17일생
+데이터 입력이 완료되었습니다.
+
+메뉴를 선택하세요.
+----------------
+1.데이터 입력
+2.데이터 검색
+3.데이터 삭제
+4.데이터 전체출력
+5.프로그램 종료
+----------------
+선택:2
+데이터 검색을 시작합니다.
+이름: 홍길동
+name: 홍길동
+phone: 111-2222
+birth: 99년 4월 17일생
+데이터 검색이 완료되었습니다.
+
+메뉴를 선택하세요.
+----------------
+1.데이터 입력
+2.데이터 검색
+3.데이터 삭제
+4.프로그램 종료
+----------------
+선택:3
+데이터 삭제를 시작합니다..
+이름: 홍길동
+데이터가 삭제되었습니다.

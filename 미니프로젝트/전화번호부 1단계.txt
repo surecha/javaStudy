@@ -1,0 +1,25 @@
+자바 콘솔 프로젝트...
+
+<전화번호부 1단계>
+
+class PhoneBook
+{
+	public static void main(String[] args)
+	{
+		PhoneInfo pInfo1=new PhoneInfo("홍길동", "111-2222", "90/08/30");
+		PhoneInfo pInfo2=new PhoneInfo("이순신", "222-3333");
+		
+		pInfo1.showPhoneInfo();
+		pInfo2.showPhoneInfo();
+	}
+}
+
+class PhoneInfo
+{
+	private String name;
+	private String phoneNum;
+	private String birth;
+
+	//정의할것...
+
+}
